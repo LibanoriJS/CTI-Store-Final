@@ -1,0 +1,37 @@
+INSERT INTO users VALUES 
+(null, 'Antony', 'Ramos', 'antony@gmail.com', '1234'),  
+(null, 'Pedro', 'Barros', 'pedro@gmail.com', '5678');
+SELECT * FROM users;
+
+INSERT INTO courses VALUES 
+(null, 'Learn English for PTE', 'Agnes Frank', '30', 'https://www.logitrain.com.au/wp-content/uploads/2017/07/PTE-Academic-Experience.jpg', '"Prepare for success in the PTE (Pearson Test of English) with our 'Learn English for PTE' course. Develop your English language skills and gain the specific knowledge and strategies needed to excel in the PTE exam. From speaking and listening to reading and writing, this course provides comprehensive training to help you achieve your desired PTE score and reach your academic or professional goals."', true, 15),  
+(null, 'Basic to Advanced Office', 'Adrian Nass', '190', 'https://5.imimg.com/data5/BC/DV/MY-22794570/advanced-ms-office-training-programming-500x500.jpg', '"Take your proficiency in office software from 'Basic to Advanced' with our comprehensive course. Starting with fundamental skills in popular office applications like Microsoft Word, Excel, and PowerPoint, you'll progress to mastering advanced features and techniques. Whether you're looking to boost your productivity at work or enhance your resume, this course is your path to becoming a proficient office software user."', true, 17),  
+(null, 'UI starter course', 'Clara Német', '35', 'https://www.springboard.com/blog/wp-content/uploads/2023/05/ui-course-by-learn-ui-design-1200x756.png', 'Unlock the world of User Interface (UI) design with our UI Starter Course. Explore essential principles, tools, and techniques used to create captivating user interfaces. Learn about layout design, color theory, typography, and interaction elements, setting the foundation for an exciting journey into the world of web and app design.', false, 5),  
+(null, 'Fixing Mobiles', 'Leonard  Herceg', '13', 'https://www.mobilerepairfactory.com.au/wp-content/uploads/2019/07/1.png', 'Learn the secrets of 'Fixing Mobile' with our specialized course. Discover the techniques for repairing cracked screens, replacing sound systems, and reviving mobile devices to their full potential. Gain the hands-on skills to give new life to smartphones and tablets, saving money and reducing e-waste', true, 10),  
+(null, 'Credit Card Money', 'Rosa De Bruin', '34', 'https://www.mcall.com/wp-content/uploads/migration/2016/11/08/V3E27DVRJRGM3ELLH5SQUSIDBA.jpg?w=1024', ' explore the advantages of different credit cards, from cashback rewards to travel points and flight rewards. Learn how to maximize the benefits of your credit cards, and turn everyday expenses into valuable perks. Start making the most of your credit card spending today', true, 14),  
+(null, 'Website traffic', 'Paul Tosetti', '34', 'https://www.abtasty.com/wp-content/uploads/website-traffic-1.jpg', '"Drive more visitors to your website with our 'Website Traffic' course. Learn proven strategies and techniques to increase your online presence, improve search engine rankings, and boost organic traffic. Harness the power of SEO, content marketing, social media, and paid advertising to attract a steady flow of engaged visitors to your site."', true, 14),  
+(null, 'Machine Learning', 'Ilaria Serra', '67', 'https://miro.medium.com/v2/resize:fit:1400/1*cG6U1qstYDijh9bPL42e-Q.jpeg', 'Delve into the world of 'Machine Learning' with our comprehensive course. Explore the fundamentals of artificial intelligence and data analysis, while gaining hands-on experience in building and training machine learning models. Learn to make data-driven predictions and decisions, opening doors to a wide range of applications in fields such as finance, healthcare, and more.', true, 22),  
+(null, 'Digital Design', 'Sérgio Shirai', '38', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl5K0wnuWv2faeus5-VH0kh5AO-7HhWviSLQ&usqp=CAU', 'Exercise your creativity in the digital realm with our 'Digital Design' course. Dive into the exciting world of graphic design, web design, and multimedia artistry. Learn the essential tools and techniques to craft eye-catching visuals, user-friendly websites, and engaging multimedia content. Explore the principles of color theory, typography, and layout, and bring your digital design ideas to life.', false, 3),  
+(null, 'SEO Writing', 'Kimberley Horn', '28', 'https://assets-global.website-files.com/60ef088dd8fef99352abb434/647cf2356b59fedae87535bd_what%20is%20seo%20writing.webp', 'Master the art of SEO Writing with our in-depth course. Discover the strategies and techniques to create content that not only engages readers but also ranks higher in search engine results. Learn keyword research, on-page optimization, and content structuring to boost your online visibility and drive more organic traffic to your website. Elevate your writing skills and make a significant impact in the digital world.', false, 19),  
+(null, 'Advanced DataBase', 'Júlia Liz', '32', 'https://www.cata.com.lr/media/k2/items/cache/fa55c8bad0e242eb7986dc1135b50adb_L.jpg', 'Dive into the intricacies of database design, optimization, and management. Explore advanced topics like SQL querying, database security, and scalability. Gain the expertise to tackle complex data challenges and make informed decisions, setting the stage for a successful career in data management and analytics', false, 3);
+SELECT * FROM courses;
+
+INSERT INTO assessment VALUES 
+(null, 1, 1),  
+(null, 5, 1),  
+(null, 3, 1),  
+(null, 3, 1),  
+(null, 2, 2),  
+(null, 5, 2);
+SELECT * FROM assessment;
+
+INSERT INTO cart (user_id_user, amount) VALUES (1, 0);
+SELECT * FROM cart; 
+
+INSERT INTO item_cart (courses_id_course, cart_id_cart) VALUES
+(2, 1),
+(3, 1),
+(1, 1),
+(5, 1),
+(4, 1);
+SELECT * FROM item_cart;

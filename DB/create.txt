@@ -1,0 +1,62 @@
+CREATE database IF NOT EXISTS canterbury DEFAULT CHARACTER SET utf8 ;
+USE canterbury;
+
+CREATE TABLE IF NOT EXISTS users (
+  id_user INT NOT NULL AUTO_INCREMENT,
+  name_user VARCHAR(45) NOT NULL,
+  last_name_user VARCHAR(45) NOT NULL,
+  email VARCHAR(100) NOT NULL UNIQUE, 
+  password VARCHAR(100) NOT NULL,
+  PRIMARY KEY (id_user));
+
+CREATE TABLE IF NOT EXISTS courses (
+  id_course INT NOT NULL AUTO_INCREMENT,
+  name_course VARCHAR(45) NOT NULL,
+  author VARCHAR(45) NOT NULL,
+  price FLOAT NOT NULL,
+  image_course VARCHAR(255) NULL,
+  description TEXT(400) NULL,
+  is_release BOOLEAN  DEFAULT FALSE,
+  views INT DEFAULT 0,
+  PRIMARY KEY (id_course));
+
+CREATE TABLE IF NOT EXISTS assessment (
+  id_assessment INT NOT NULL AUTO_INCREMENT,
+  stars INT NOT NULL,
+  courses_id_course INT NOT NULL,
+  PRIMARY KEY (id_assessment),
+  CONSTRAINT fk_assessment_courses
+    FOREIGN KEY (courses_id_course)
+    REFERENCES courses (id_course)
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION);
+
+CREATE TABLE IF NOT EXISTS cart (
+  id_cart INT NOT NULL AUTO_INCREMENT,
+  user_id_user INT NULL, 
+  amount FLOAT NULL,
+  PRIMARY KEY (id_cart),
+  CONSTRAINT fk_cart_users
+    FOREIGN KEY (user_id_user)
+    REFERENCES users (id_user)
+    ON DELETE SET NULL
+    ON UPDATE CASCADE
+);
+
+
+CREATE TABLE IF NOT EXISTS item_cart (
+  id_item_cart INT NOT NULL AUTO_INCREMENT,
+  courses_id_course INT NOT NULL,
+  cart_id_cart INT NOT NULL,
+  PRIMARY KEY (id_item_cart),
+    FOREIGN KEY (courses_id_course)
+    REFERENCES courses (id_course)
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION,
+  CONSTRAINT fk_item_cart_cart
+    FOREIGN KEY (cart_id_cart)
+    REFERENCES cart (id_cart)
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION);
+
+

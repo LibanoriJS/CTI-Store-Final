@@ -1,0 +1,120 @@
+body {
+    background-color: #FFF;
+    justify-content: center;
+    align-items: center;
+}
+
+#container-login {
+    width: 1000px;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1.5px solid #aecdff;
+}
+
+.image-login {
+    width: 50%;
+    height: 100%;
+    background-color: #E5FFF7;
+}
+
+.login-content {
+    width: 50%;
+    height: 100%;
+    background: var(--Degrade, linear-gradient(95deg, #65A08E 0%, #65A08E 49.95%, #2C8368 99.91%));
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.login-content h2 {
+    text-align: center;
+    color: var(--White, #FFF);
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.35px;
+    text-transform: uppercase;
+}
+
+
+.form-login {
+    width: 75%;
+    color: var(--White, #FFF);
+    font-family: Inter;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.765px;
+    text-transform: capitalize;
+}
+
+.form-password {
+    padding: 20px 0;
+}
+
+.form-email input{
+    width: 100%;
+    height: 35px;
+    padding: 0 10px;
+}
+
+.form-password input {
+    width: 100%;
+    height: 35px;
+    padding: 0 10px;
+}
+
+.login-btn {
+    width: 100%;
+    height: 35px;
+    color: #FFF;
+    border-radius: 5px;
+    border: 1px solid var(--White, #FFF);
+    background: #00239E;
+}
+
+.login-btn:hover {
+    background: #1b3db6;
+}
+
+.login-content p {
+    color: #FFF;
+}
+
+.login-content p>a {
+    color: #FFF;
+}
+
+
+@media screen and (max-width: 768px) {
+    body {
+        background: var(--Degrade, linear-gradient(95deg, #65A08E 0%, #65A08E 49.95%, #2C8368 99.91%));
+    }
+
+    #container-login {
+        border: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    .image-login {
+        display: none;
+    }
+
+    .login-content {
+        width: 100%;
+    }
+
+    .form-login {
+        width: 75%;
+    }
+}
+  

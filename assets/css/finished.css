@@ -1,0 +1,36 @@
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.content img {
+    width: 150px;
+    height: auto;
+}
+.content span {
+    color: blue;
+}
+
+.description {
+    text-align: start;
+}
+
+@media screen and (max-width: 768px) { 
+    .content {
+        flex-direction: column;
+    }   
+
+    .content img {
+        width: 100px;
+        height: auto;
+    }
+
+    .description {
+        text-align: center;
+    }
+}
+
+
+  

@@ -1,0 +1,96 @@
+#course {
+    padding: 40px 0;
+}
+
+.course-actions {
+    height: 40px;
+    display: flex;
+    gap: 5px;
+}
+
+.main-data {
+    width: 100%;
+    display: flex;
+    gap: 4rem;
+}
+
+.course-image {
+    width: 24rem;
+    height: 24rem;
+    background-color: #65A08E;
+}
+
+.course-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.course-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.course-data .top-data {
+    width: 100%;
+}
+
+.top-data h2 {
+    margin-bottom: 15px;
+}
+
+.add-cart {
+    width: 40px;
+    display: grid;
+    place-items: center;
+    background-color: #339CFF;
+    border: none;
+}
+
+.add-cart img {
+    height: 60%;
+}
+
+.buy {
+    display: grid;
+    place-items: center;
+    padding: 0 50px;
+    background-color: #27C300;
+    text-decoration: none;
+}
+
+.buy p {
+    color: #FFF;
+    font-weight: bold;
+}
+
+
+.add-cart:hover, .buy:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+.rating {
+    display: flex;
+}
+
+.stars-list {
+    display: flex;
+    list-style: none;
+}
+
+.description {
+    padding-top: 40px;
+}
+
+.description h3 {
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) { 
+    .main-data {
+        flex-direction: column;
+    }  
+}
+
+
+  

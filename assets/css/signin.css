@@ -1,0 +1,117 @@
+body {
+    background-color: #FFF;
+    justify-content: center;
+    align-items: center;    
+}
+
+#container-signin {
+    width: 1000px;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1.5px solid #aecdff;
+}
+
+.image-signin {
+    width: 50%;
+    height: 100%;
+    background-color: #E5FFF7;
+}
+
+.signin-content {
+    width: 50%;
+    height: 100%;
+    background: var(--Degrade, linear-gradient(95deg, #65A08E 0%, #65A08E 49.95%, #2C8368 99.91%));
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.signin-content h2 {
+    text-align: center;
+    color: var(--White, #FFF);
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.35px;
+    text-transform: uppercase;
+}
+
+
+.form-signin {
+    width: 75%;
+    color: var(--White, #FFF);
+    font-family: Inter;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.765px;
+    text-transform: capitalize;
+}
+
+.form-signin>div {
+    margin: 15px 0;
+}
+
+.form-email input, 
+.form-name input, 
+.form-last-name input,
+.form-password input,
+.form-c-password input {
+    width: 100%;
+    height: 35px;
+    padding: 0 10px;
+}
+
+.signin-btn {
+    width: 100%;
+    height: 35px;
+    color: #FFF;
+    border-radius: 5px;
+    border: 1px solid var(--White, #FFF);
+    background: #00239E;
+}
+
+.signin-btn:hover {
+    background: #1b3db6;
+}
+
+.signin-content p {
+    color: #FFF;
+}
+
+.signin-content p>a {
+    color: #FFF;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background: var(--Degrade, linear-gradient(95deg, #65A08E 0%, #65A08E 49.95%, #2C8368 99.91%));
+    }
+
+    #container-signin {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .image-signin {
+        display: none;
+    }
+
+    .signin-content {
+        width: 100%;
+    }
+
+    .form-signin {
+        width: 75%;
+    }
+}
+  
